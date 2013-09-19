@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+/*各要素の初期設定*/
+body, h1, div, p, ul, li, a, form, input, label {
+	margin: 0;
+	padding: 0;
+}
+ul, li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	outline: 0;
+}
+a img {
+	border: none;
+}
+input {
+	outline: 0;
+}
+
+/*ページ全体のスタイル*/
+body {
+	background: #ccffff;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+/*コンテンツを内包するdiv要素*/
+#content {
+	width: 800px;
+	height: 520px;
+	margin: -270px 0 0 -475px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	background:
+		url(../images/bg2.png) repeat left top;
+	-webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
+	-o-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
+	-ms-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.15);
+	box-shadow: 10px 10px 20px rgba(0, 0, 0 ,0.15);
+	border: 10px solid #fff;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-o-border-radius: 15px;
+	border-radius: 15px;
+	*background: #2badd0 url(../images/bg2.png) repeat left top;	/*IE6,7に適用*/
+	background: #2badd0 url(../images/bg2.png) repeat left top\9;	/*IE8に適用*/
+	behavior: url(../Content/PIE.htc);	/*動作させるには絶対パスに修正する*/
+}
+
+/*タイトル*/
+#content h1 {
+	padding: 70px 70px 70px 0;
+	margin: 0 20px 0 0;
+	position: absolute;
+	right: 50%;
+	top: 90px;
+}
+
+/*フォーム全体を内包するdiv要素*/
+#form {
+	/*margin: 0 0 0 -20px;*/
+	position: absolute;
+	left: 50%;
+	top: 30%;
+}
+
+/*フォーム要素の配置*/
+#form p {
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+/*テキストフィールドのラベル*/
+#form label {
+	display: block;
+	margin: 0 0 0 3px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	color: #fff;
+}
+
+/*テキストフィールド、パスワードフィールド*/
+#form input[type="text"] {
+	position:relative;
+	width: 200px;
+	height: 25px;
+	padding: 5px 10px;
+	-webkit-box-shadow: inset 1px 2px 1px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: inset 1px 2px 1px rgba(0, 0, 0, 0.2);
+	-o-box-shadow: inset 1px 2px 1px rgba(0, 0, 0, 0.2);
+	-ms-box-shadow: inset 1px 2px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: inset 1px 2px 1px rgba(0, 0, 0 ,0.2);
+	border: 3px solid #caeff2;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+	-ms-border-radius: 20px;
+	border-radius: 20px;
+	behavior: url(../Content/PIE.htc);	/*動作させるには絶対パスに修正する*/
+}
+ #form input[type="password"] {
+	position:relative;
+	width: 200px;
+	height: 25px;
+	padding: 5px 10px;
+	-webkit-box-shadow: inset 1px 2px 1px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: inset 1px 2px 1px rgba(0, 0, 0, 0.2);
+	-o-box-shadow: inset 1px 2px 1px rgba(0, 0, 0, 0.2);
+	-ms-box-shadow: inset 1px 2px 1px rgba(0, 0, 0, 0.2);
+	box-shadow: inset 1px 2px 1px rgba(0, 0, 0 ,0.2);
+	border: 3px solid #caeff2;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+	-ms-border-radius: 20px;
+	border-radius: 20px;
+	behavior: url(../Content/PIE.htc);	/*動作させるには絶対パスに修正する*/
+}
+#form input[type="text"]:hover, #form input[type="password"]:hover {
+	border-color: #d3da21;
+}
+#form input[type="text"]:focus, #form input[type="password"]:focus {
+	border-color: #0c93c6;
+}
+#form .login input {
+	position:relative;
+	top: 20px;
+	width: 120px;
+	height: 40px;
+border: 3px outset #6ff;
+	-webkit-border-radius: 16px;
+	-moz-border-radius: 16px;
+	-o-border-radius: 16px;
+	-ms-border-radius: 16px;
+border-radius:16px;
+font: bold;
+text-align: center;
+color: #69c;
+text-decoration:none;
+background:#cff;
+
+}
+#form .login input:hover{
+background:#9f9;
+border: 5px outset #6fc;
+}
+/*フッタ*/
+#footer {
+	width: 100%;
+	padding: 60px 0 10px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	-webkit-border-image: url(../images/halftone.png) 50 0 0 0 / 50px 0 0 0 repeat;
+	-moz-border-image: url(../images/halftone.png) 50 0 0 0 / 50px 0 0 0 repeat;
+	-o-border-image: url(../images/halftone.png) 50 0 0 0 / 50px 0 0 0 repeat;
+	-ms-border-image: url(../images/halftone.png) 50 0 0 0 / 50px 0 0 0 repeat;
+	*background: #fff;	/*IE6,7に適用*/
+	background: #fff\9;	/*IE8に適用*/
+}
+
+/*フッタ（クレジット）*/
+#footer p.credit {
+	float: left;
+	margin: 5px 0 0 15px;
+	font-size: x-small;
+	color: #2da6d4;
+}
+
+/*フッタ（ナビゲーション）*/
+#footer ul {
+	float: right;
+	margin-right: 15px;
+}
+#footer ul li {
+	display: inline;
+	margin: 0 0 0 15px;
+}
+#footer ul li a {
+	font-size: small;
+	font-weight: bold;
+	color: #2da6d4;
+}
+#footer ul li a:hover {
+	color: #d3da21;
+}
+
+/*IE対策JavaScript用*/
+#content .cloudForIE {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#footer .borderForIE {
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	left: 0;
+	top: -50px;
+	background: url(../images/halftone.png) repeat-x left top;
+}

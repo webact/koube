@@ -1,0 +1,487 @@
+@charset "UTF-8";
+
+/* //////////////////////////////////////////////////
+[Base] 
+////////////////////////////////////////////////// */
+
+/* for IE7: page zoom bug fix */
+*:first-child+html body,
+*:first-child+html br { letter-spacing: 0; }
+
+/* for IE6-7: hasLayout bug fix */
+h1, h2, h3, h4, h5, h6,
+p, dl, dt, dd, ul, ol, li, table, th, td,
+div, blockquote, pre,
+form, fieldset, legend,
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	*zoom: 1;
+}
+
+/* for IE6-7: line-height bug fix */
+body {
+/*グラデーション-------------------------*/
+/* Firefox */
+background-image:
+-moz-linear-gradient(
+rgb(227,227,227),
+rgb(255,255,255) 33px); 
+
+/* WebKit */
+background-image:
+-webkit-linear-gradient(
+rgb(227,227,227),
+rgb(255,255,255) 33px);
+
+background-image:
+linear-gradient(
+rgb(227,227,227),
+rgb(255,255,255) 33px);
+
+background-color: #FFF;
+font-size: 14px;
+color: #333;
+	*line-height: 1.2;
+}
+
+/* override html5reset.css */
+input, select, button {
+	font-size: 100%;
+}
+li {
+	list-style: none;
+}
+
+/* //////////////////////////////////////////////////
+[Layout] 
+////////////////////////////////////////////////// */
+
+body {
+	min-width: 600px;
+	color: #515151;
+	font-size: 14px;
+    font-family:Tahoma,"メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro";
+
+}
+a {
+	color: #0371A8;
+}
+a:link,
+a:visited {
+	text-decoration: none;
+}
+a:focus,
+a:hover,
+a:active {
+	text-decoration: underline;
+}
+fieldset.group01
+{
+    border:#eee 1px groove;
+    border-radius: 5px;
+}
+legend
+{
+color:Navy    }
+/* --------------------------------------------------
+	Header
+-------------------------------------------------- */
+
+#header {
+	overflow: hidden;
+	padding: 0 20px 0;
+}
+
+/* siteID */
+#siteID {
+	float: left;
+	line-height: 1;
+	margin: 10px 20px 0 0;
+	color: #515151;
+	font-size: 24px;
+    font-family:Tahoma,"メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro";
+}
+#siteID a {
+	color: #515151;
+	text-decoration: none;
+}
+
+/* userInfo */
+#userInfo {
+	float: left;
+	_width: 300px;
+	color: #666;
+	font-size: 11px;
+}
+#userInfo li {
+	margin-bottom: 5px;
+}
+#userInfo b {
+	margin: 0 3px;
+}
+
+/* utilityNav */
+#utilityNav {
+	float: right;
+}
+#utilityNav li {
+	margin: 0 0 0 10px;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+#utilityNav a {
+	color: #515151;
+	white-space: nowrap;
+}
+
+/* mainNav */
+#menu {
+	clear: both;
+	margin: 0 -20px;
+	
+	font-size: 16px;
+}
+
+#menu
+{
+   width: 100%;
+    margin: 0;
+    padding: 10px 0 0 0;
+    list-style: none;  
+    background: #111;
+    background: -moz-linear-gradient(top, #444, #111); 
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #111),color-stop(1, #444));
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    -moz-box-shadow: 0 2px 1px #9c9c9c;
+    -webkit-box-shadow: 0 2px 1px #9c9c9c;
+    box-shadow: 0 2px 1px #9c9c9c;
+}
+ 
+#menu li
+{
+    float: left;
+    padding: 0 0 10px 0;
+    position: relative;
+}
+ 
+#menu a 
+{
+    float: left;
+    height: 25px;
+    padding: 0 25px;
+    color: #999;
+    text-transform: uppercase;
+    font: bold 12px/25px Arial, Helvetica;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #000;
+}
+ 
+#menu li:hover > a
+{
+    color: #fafafa;
+}
+ 
+*html #menu li a:hover /* IE6 */
+{
+    color: #fafafa;
+}
+ 
+#menu li:hover > ul
+{
+    display: block;
+}
+ 
+/* Sub-menu */
+ 
+#menu ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;    
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    z-index: 99999;    
+    background: #444;
+    background: -moz-linear-gradient(top, #444, #111);
+    background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #111),color-stop(1, #444));    
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+ 
+#menu ul li
+{
+    float: none;
+    margin: 0;
+    padding: 0;
+    display: block;  
+    -moz-box-shadow: 0 1px 0 #111111, 0 2px 0 #777777;
+    -webkit-box-shadow: 0 1px 0 #111111, 0 2px 0 #777777;
+    box-shadow: 0 1px 0 #111111, 0 2px 0 #777777;
+}
+ 
+#menu ul li:last-child
+{
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;    
+}
+ 
+#menu ul a
+{
+    padding: 10px;
+    height: auto;
+    line-height: 1;
+    display: block;
+    white-space: nowrap;
+    float: none;
+    text-transform: none;
+}
+ 
+*html #menu ul a /* IE6 */
+{
+    height: 10px;
+    width: 150px;
+}
+ 
+*:first-child+html #menu ul a /* IE7 */
+{
+    height: 10px;
+    width: 150px;
+}
+ 
+#menu ul a:hover
+{
+    background: #0186ba;
+    background: -webkit-gradient(linear, left top, left bottom, from(#04acec), to(#0186ba));
+    background: -moz-linear-gradient(top,  #04acec,  #0186ba) !important;
+    filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#04acec', endColorstr='#0186ba'); /* IE */
+}
+ 
+#menu ul li:first-child a
+{
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+ 
+#menu ul li:first-child a:after
+{
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: -8px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 8px solid #444;
+}
+ 
+#menu ul li:first-child a:hover:after
+{
+    border-bottom-color: #04acec; 
+}
+ 
+#menu ul li:last-child a
+{
+    -moz-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+}
+ 
+/* Clear floated elements */
+#menu:after
+{
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+ 
+* html #menu             { zoom: 1; } /* IE6 */
+*:first-child+html #menu { zoom: 1; } /* IE7 */
+
+/* --------------------------------------------------
+	Contents
+-------------------------------------------------- */
+#contents {
+	padding: 0 20px 20px;
+	font-size: 14px;
+}
+
+/* --------------------------------------------------
+	Footer
+-------------------------------------------------- */
+#footer {
+	overflow: hidden;
+	padding: 15px 20px;
+	border-top: 2px solid #0371A8;
+}
+
+/* rulesNav */
+#rulesNav {
+	float: left;
+}
+#rulesNav li {
+	margin: 0 10px 0 0;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+#rulesNav a {
+	color: #515151;
+}
+
+/* copyright */
+#copyright 
+{
+    font:small;
+	float: right;
+}
+
+/* //////////////////////////////////////////////////
+[Module] 
+////////////////////////////////////////////////// */
+
+/* lead */
+.lead {
+	margin-bottom: 10px;
+}
+.lead h1 {
+	margin: 0 0 5px;
+	padding:5px 0 7px 0;
+	border-left: 20px solid #eee;
+	border-bottom: 1px solid #eee;
+	font-size: 18px;
+}
+.detailList1 ul li a {
+	text-decoration: none;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+	*zoom: 1;
+}
+.detailList1 ul li a:hover{
+    background-color: #fcc;
+}
+.detailList1 h3, .detailList3 h3, .detailList5 h3{
+    border-left : 20px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+.detailList1 {
+    font:bold 16px/2em;
+	padding: 10px 20px 10px;
+	background: #ccf; 
+	border-radius: 5px;
+}
+.detailList1 input.text {
+width: 21em;
+height:2em;
+margin: 0 1em;
+text-align:left;
+padding-left:6em;
+}
+.detailList1 dl dt.keyid1 {
+padding-left:5em;
+
+}
+.detailList1 dl dt.keyid,.detailList1 dl dt.keyid1 {
+	display: inline-block;
+	*display: inline;
+}
+
+.detailList1 input.submit,.detailList1 input.reset{
+/*	float:right;*/
+
+    position:relative;
+    left:85%;
+	width: 120px;
+	height:2em;
+    padding:2px;
+	font: bold  16px;
+	color: #fff;
+	border:2px outset #9cf;
+	background: #0371a8;
+	
+	/* CSS3 */
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-transition: background 1s ease, box-shadow 1s ease;
+	-moz-transition: background 1s ease, box-shadow 1s ease;
+	transition: background 1s ease, box-shadow 1s ease;
+}
+
+.detailList1 input.submit:hover ,.detailList1 input.reset:hover{
+	background: #A5B596;
+	-webkit-box-shadow: 0 0 20px #A5B596;
+	-moz-box-shadow: 0 0 20px #A5B596;
+	box-shadow: 0 0 20px #A5B596;
+	cursor: pointer;
+}
+
+.detailList1 input.submit2,.detailList1 input.reset2{
+/*	float:right;*/
+
+    position:relative;
+    left:60%;
+	width: 120px;
+	height:2em;
+    padding:2px;
+	font: bold  16px;
+	color: #fff;
+	border:2px outset #9cf;
+	background: #0371a8;
+	
+	/* CSS3 */
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-transition: background 1s ease, box-shadow 1s ease;
+	-moz-transition: background 1s ease, box-shadow 1s ease;
+	transition: background 1s ease, box-shadow 1s ease;
+}
+
+.detailList1 input.submit2:hover ,.detailList1 input.reset2:hover{
+	background: #A5B596;
+	-webkit-box-shadow: 0 0 20px #A5B596;
+	-moz-box-shadow: 0 0 20px #A5B596;
+	box-shadow: 0 0 20px #A5B596;
+	cursor: pointer;
+}
+
+.detailList1 input.submit3,.detailList1 input.reset3{
+/*	float:right;*/
+
+    position:relative;
+    left:45%;
+	width: 120px;
+	height:2em;
+    padding:2px;
+	font: bold  16px;
+	color: #fff;
+	border:2px outset #9cf;
+	background: #0371a8;
+	
+	/* CSS3 */
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-transition: background 1s ease, box-shadow 1s ease;
+	-moz-transition: background 1s ease, box-shadow 1s ease;
+	transition: background 1s ease, box-shadow 1s ease;
+}
+
+.detailList1 input.submit3:hover ,.detailList1 input.reset3:hover{
+	background: #A5B596;
+	-webkit-box-shadow: 0 0 20px #A5B596;
+	-moz-box-shadow: 0 0 20px #A5B596;
+	box-shadow: 0 0 20px #A5B596;
+	cursor: pointer;
+}
+
+font.error
+{
+    color:Red;
