@@ -49,6 +49,7 @@ Namespace koube
                 End While
 
                 'COMMIT TEST ESIT
+                'MERGE BRANCH TEST 
 
                 'Title = "食数日次確認 モデル"
             Catch
