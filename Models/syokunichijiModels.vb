@@ -48,6 +48,7 @@ Namespace koube
                     OraDynaset.MoveNext()
                 End While
 
+                'COMMIT TEST ESIT
 
                 'Title = "食数日次確認 モデル"
             Catch
