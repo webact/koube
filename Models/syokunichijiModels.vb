@@ -48,7 +48,7 @@ Namespace koube
                     OraDynaset.MoveNext()
                 End While
 
-                'ブランチTestの為のコメント その２
+                'ブランチTestの為のコメント その２ その３
  
                 'Title = "食数日次確認 モデル"
             Catch
