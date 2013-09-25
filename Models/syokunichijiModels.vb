@@ -48,9 +48,8 @@ Namespace koube
                     OraDynaset.MoveNext()
                 End While
 
-                'COMMIT TEST ESIT
-                'MERGE BRANCH TEST 
-
+                'ブランチTestの為のコメント
+ 
                 'Title = "食数日次確認 モデル"
             Catch
                 OraDynaset = Nothing
